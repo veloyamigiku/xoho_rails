@@ -22,6 +22,17 @@
             "useBundler": true
         },
         {
+            "name": "Rails test",
+            "type": "Ruby",
+            "request": "launch",
+            "program": "${workspaceRoot}/bin/rails",
+            "args": [
+                "test",
+                "${file}"
+            ],
+            "useBundler": true
+        },
+        {
             "name": "Rails db:seed",
             "type": "Ruby",
             "request": "launch",

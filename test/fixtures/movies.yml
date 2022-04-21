@@ -4,8 +4,17 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
+#one: {}
 # column: value
 #
-two: {}
+#two: {}
 # column: value
+1:
+  name: モービウス
+  play_started_on: 2022-04-01
+2:
+  name: とんび
+  play_started_on: 2022-04-03
+3:
+  name: ニワトリ☆フェニックス
+  play_started_on: 2022-04-15
