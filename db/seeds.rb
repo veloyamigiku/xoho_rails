@@ -28,6 +28,12 @@ csv_info_list.each do |csv_info|
     body = File.open(csv_path).read
     csv = CSV.new(body, headers: true)
     csv.to_a.map do |row|
-        csv_info["model"].create(row.to_hash)
+        exists_model = csv_info["model"].find_by(id: row.to_hash['id'])
+        if exists_model.nil? then
+            csv_info["model"].create(row.to_hash)
+        else
+            exists_model.update(row.to_hash)
+        end
+        
     end
 end
