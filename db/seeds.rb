@@ -16,10 +16,15 @@ csv_info_list = [
     {
         "name" => "theater.csv",
         "model" => Theater
+    },
+    {
+        "name" => "movie_theater.csv",
+        "model" => MovieTheater
     }]
 
 csv_info_list.each do |csv_info|
     csv_path = File.dirname(__FILE__) + File::SEPARATOR + csv_info["name"]
+    puts(csv_path)
     body = File.open(csv_path).read
     csv = CSV.new(body, headers: true)
     csv.to_a.map do |row|
