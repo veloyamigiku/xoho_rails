@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_07_042916) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_07_044740) do
   create_table "areas", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -33,6 +33,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_042916) do
     t.datetime "play_started_on"
   end
 
+  create_table "prefectures", force: :cascade do |t|
+    t.string "name"
+    t.integer "area_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_prefectures_on_area_id"
+  end
+
   create_table "theaters", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -41,4 +49,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_07_042916) do
 
   add_foreign_key "movie_theaters", "movies"
   add_foreign_key "movie_theaters", "theaters"
+  add_foreign_key "prefectures", "areas"
 end

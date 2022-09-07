@@ -24,6 +24,10 @@ csv_info_list = [
     {
         "name" => "area.csv",
         "model" => Area
+    },
+    {
+        "name" => "prefecture.csv",
+        "model" => Prefecture
     }]
 
 csv_info_list.each do |csv_info|
