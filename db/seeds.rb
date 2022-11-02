@@ -10,6 +10,14 @@ require 'json'
 
 csv_info_list = [
     {
+        "name" => "area.csv",
+        "model" => Area
+    },
+    {
+        "name" => "prefecture.csv",
+        "model" => Prefecture
+    },
+    {
         "name" => "movie.csv",
         "model" => Movie
     },
@@ -20,14 +28,6 @@ csv_info_list = [
     {
         "name" => "movie_theater.csv",
         "model" => MovieTheater
-    },
-    {
-        "name" => "area.csv",
-        "model" => Area
-    },
-    {
-        "name" => "prefecture.csv",
-        "model" => Prefecture
     }]
 
 csv_info_list.each do |csv_info|
